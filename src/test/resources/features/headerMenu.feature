@@ -6,7 +6,7 @@ Feature: Urunler menusu butun başlıkları kontrol
     When Kullanici urunlere tiklamali
 
   @resim
-  Scenario:Urunler Beyaz Esya sekmesinde bütün seçenekleri tek tek kontrol etme
+  Scenario Outline:Urunler Beyaz Esya sekmesinde bütün seçenekleri tek tek kontrol etme
     And Kullanici once "<Tab>" sonra "<Module>" tiklamali
 
     Examples:

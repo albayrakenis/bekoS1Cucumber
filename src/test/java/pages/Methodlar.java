@@ -1,9 +1,12 @@
 package pages;
 
+import com.github.javafaker.Faker;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import utility.BrowserUtils;
 import utility.Driver;
 
@@ -21,6 +24,7 @@ public class Methodlar {
     SatinAl satinAl = new SatinAl();
     UrunSayfasi urunSayfasi = new UrunSayfasi();
     Anasayfa anasayfa = new Anasayfa();
+    Faker faker =new Faker();
 
 
     public void getText(WebElement element) {
@@ -136,8 +140,40 @@ public class Methodlar {
         BrowserUtils.waitForPageToLoad(10);
         urunSayfasi.sepeteEklendiPopupCarpi.click();
         urunSayfasi.kilavuzAnasayfa.click();
+    }
 
+    public void ilIlceSecme(){
+
+        Select select = new Select(Driver.get().findElement(By.id("cityCode")));
+        select.selectByVisibleText("KOCAELİ");
+        Select selectIlce = new Select(Driver.get().findElement(By.id("townCode")));
+        selectIlce.selectByVisibleText("DARICA");
+        Select selectMahalle = new Select(Driver.get().findElement(By.id("neighborhood")));
+        selectMahalle.selectByVisibleText("NENEHATUN");
 
     }
+
+    public void ilIlceMahalleSecme(String il, String ilce, String mahalle){
+
+        Select select = new Select(Driver.get().findElement(By.id("cityCode")));
+        select.selectByVisibleText(il);
+        Select selectIlce = new Select(Driver.get().findElement(By.id("townCode")));
+        selectIlce.selectByVisibleText(ilce);
+        Select selectMahalle = new Select(Driver.get().findElement(By.id("neighborhood")));
+        selectMahalle.selectByVisibleText(mahalle);
+
+    }
+    public void adresBilgileriDoldurma(){
+
+        Driver.get().findElement(By.id("fullName")).sendKeys(faker.name().fullName());
+        BrowserUtils.waitFor(2);
+        Driver.get().findElement(By.id("phone")).sendKeys(faker.phoneNumber().phoneNumber());
+        Driver.get().findElement(By.id("line1")).sendKeys(faker.name().title());
+        Driver.get().findElement(By.id("addressName")).sendKeys(faker.address().cityName()+faker.name().title());
+        WebElement adresiKaydet = Driver.get().findElement(By.cssSelector("button[title='Adresi Kaydet']"));
+        BrowserUtils.clickWithJS(adresiKaydet);
+
+    }
+
 
 }

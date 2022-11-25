@@ -1,7 +1,7 @@
 Feature: Urun satin alma
 
   @satinal
-  Scenario: Kredi karti ile urun satin alma
+  Scenario Outline: Kredi karti ile urun satin alma
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali
     And Kullanici urun secmeli "<kategoriAdi>" "<baslikAdi>" "<urunAdi>"
