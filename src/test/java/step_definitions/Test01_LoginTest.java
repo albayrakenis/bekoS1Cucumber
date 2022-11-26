@@ -9,6 +9,7 @@ import utility.ConfigurationReader;
 import utility.Driver;
 
 import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
 public class Test01_LoginTest {
     Login login = new Login();
@@ -21,6 +22,7 @@ public class Test01_LoginTest {
     public void kullaniciGirisSayfasinaGitmeli() {
         Driver.get().get(ConfigurationReader.get("url"));
         Driver.get().manage().window().maximize();
+        Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
 
