@@ -48,6 +48,8 @@ public class Anasayfa {
     @FindBy(css = ".btn-search-post > .icon")
     public WebElement aramaButonu;
 
+    @FindBy(xpath = "//div[@class='hum']/a[.='Hesabım']")
+    public WebElement hesabimButton;
 
 
 

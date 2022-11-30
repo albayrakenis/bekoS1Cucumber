@@ -23,6 +23,18 @@ public class Bildirimler {
     @FindBy(xpath = "(//a[@class='nav-link'])[]")
     public WebElement secenekler;
 
+    @FindBy(xpath = "//button[@class='btn btn-outline-dark btn-new-address js-open-address-layer']")
+    public WebElement yeniAdresEkle;
+
+    @FindBy(css = "#save-address-btn")
+    public WebElement adresiKaydet;
+
+    @FindBy(css = "[data-addr-individual] .form-error-msg")
+    public WebElement gecerliAdGiriniz;
+
+    @FindBy(css = "#command > div:nth-of-type(6) .form-error-msg")
+    public WebElement gecerliTelefonGiriniz;
+
     @FindBy(xpath = "//div[@class='container-max-1200 no-pad']//a[contains(@href,'/urunlerim')]")
     public WebElement urunlerim;
 
