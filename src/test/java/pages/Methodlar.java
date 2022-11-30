@@ -142,14 +142,13 @@ public class Methodlar {
         urunSayfasi.kilavuzAnasayfa.click();
     }
 
-    public void ilIlceSecme(){
+    public void ilIlceSecme(String il, String ilce){
 
         Select select = new Select(Driver.get().findElement(By.id("cityCode")));
-        select.selectByVisibleText("KOCAELİ");
+        select.selectByVisibleText(il);
         Select selectIlce = new Select(Driver.get().findElement(By.id("townCode")));
-        selectIlce.selectByVisibleText("DARICA");
-        Select selectMahalle = new Select(Driver.get().findElement(By.id("neighborhood")));
-        selectMahalle.selectByVisibleText("NENEHATUN");
+        selectIlce.selectByVisibleText(ilce);
+
 
     }
 
@@ -169,6 +168,18 @@ public class Methodlar {
         BrowserUtils.waitFor(2);
         Driver.get().findElement(By.id("phone")).sendKeys(faker.phoneNumber().phoneNumber());
         Driver.get().findElement(By.id("line1")).sendKeys(faker.name().title());
+        Driver.get().findElement(By.id("addressName")).sendKeys(faker.address().cityName()+faker.name().title());
+        WebElement adresiKaydet = Driver.get().findElement(By.cssSelector("button[title='Adresi Kaydet']"));
+        BrowserUtils.clickWithJS(adresiKaydet);
+
+    }
+
+    public void adresBilgileriEksikDoldurma(String fullName,String phoneNumber){
+
+        Driver.get().findElement(By.id("fullName")).sendKeys(fullName);
+        BrowserUtils.waitFor(2);
+        Driver.get().findElement(By.id("phone")).sendKeys(phoneNumber);
+        Driver.get().findElement(By.id("line1")).sendKeys(faker.name().title()+faker.address().cityName());
         Driver.get().findElement(By.id("addressName")).sendKeys(faker.address().cityName()+faker.name().title());
         WebElement adresiKaydet = Driver.get().findElement(By.cssSelector("button[title='Adresi Kaydet']"));
         BrowserUtils.clickWithJS(adresiKaydet);
