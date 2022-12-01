@@ -15,18 +15,12 @@ public class SatinAl {
     @FindBy(xpath = "//button[@type='button']/span[@class='d']")
     public WebElement urunler;
 
-    @FindBy(xpath = "(//a[@title='İncele'])[1]")
-    public WebElement UrunBir;
-
-    @FindBy(xpath = "/html/body/div[2]/main/div/div/div[2]/div[7]/div[2]/div/div[2]/a/div/div[1]/div[3]/figure/img")
-    public WebElement UrunDort;
 
     @FindBy(xpath = "//*[button='Taksit Seçenekleri']/button")
     public WebElement taksitSecenekleri;
 
     @FindBy(id = "nav-commercial-tab")
     public WebElement ticariKart;
-
 
 
     @FindBy(id = "nav-commercial-tab")

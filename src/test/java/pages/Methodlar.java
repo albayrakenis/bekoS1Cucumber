@@ -148,7 +148,12 @@ public class Methodlar {
         select.selectByVisibleText(il);
         Select selectIlce = new Select(Driver.get().findElement(By.id("townCode")));
         selectIlce.selectByVisibleText(ilce);
+    }
 
+    public void ilSecme(String il){
+
+        Select select = new Select(Driver.get().findElement(By.id("cityCode")));
+        select.selectByVisibleText(il);
 
     }
 
