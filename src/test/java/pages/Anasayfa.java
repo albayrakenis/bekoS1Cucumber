@@ -51,6 +51,12 @@ public class Anasayfa {
     @FindBy(xpath = "//div[@class='hum']/a[.='Hesabım']")
     public WebElement hesabimButton;
 
+    @FindBy(xpath = "//a[.='Mağazalar']")
+    public WebElement magazalarButonu;
+
+    @FindBy(xpath = "//a[contains(.,'Mağaza Ara')]")
+    public WebElement magazaAraButonu;
+
 
 
 
