@@ -65,7 +65,8 @@ public class Test03_Bildirimler {
     }
     @Then("Kullanici cikis yap sekmesine tiklamali")
     public void kullanici_cikis_yap_sekmesine_tiklamali() throws InterruptedException {
-        bildirimler.cikisYap.click();
+        BrowserUtils.scrollToElement(bildirimler.cikisYap);
+        BrowserUtils.clickWithJS(bildirimler.cikisYap);
         Thread.sleep(2000);
         Driver.closeDriver();
     }
