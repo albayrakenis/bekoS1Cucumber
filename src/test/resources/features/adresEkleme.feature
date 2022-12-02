@@ -4,7 +4,7 @@ Feature: Adres ekleme
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali
 
-  @adres2
+  @adres2 @smoke
   Scenario Outline: Kullanici basarili bir sekilde adres ekleyebilmeli
     And Kullanici adres bilgilerini tam olarak girmeli "<il>" "<ilce>" "<mahalle>"
     And Kullanici cikis yap sekmesine tiklamali
@@ -15,7 +15,7 @@ Feature: Adres ekleme
       | ERZURUM | İSPİR   | BOZAN   |
 
 
-  @adres
+  @adres  @smoke
   Scenario Outline: Kullanici adres bilgilerini eksik girmeli
     And Kulanici adres bilgilerini eksik girmeli "<adSoyad>" "<telefonNumarasi>"
     And Kullanici adres ekleme popup kapatmali
@@ -29,7 +29,7 @@ Feature: Adres ekleme
       | enis    | /*-             |
 
 
-  @adresSil
+  @adresSil  @smoke
   Scenario: Kullanici adresleri silebilmeli
     And Kullanici hesabim sayfasina gitmeli
     And Kullanici bilgilerim sekmesine tiklamali

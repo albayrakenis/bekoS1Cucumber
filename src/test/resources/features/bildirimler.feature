@@ -1,6 +1,6 @@
 Feature: Bildirimleri kontrol etme
 
-  @wip1219
+  @wip1219 @smoke
   Scenario: Bildirimleri tek tek kontrol etme
     Given Kullanici giris sayfasina gitmeli
     Given Kullanici login olmali
