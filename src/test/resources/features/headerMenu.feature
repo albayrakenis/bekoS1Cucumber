@@ -5,7 +5,7 @@ Feature: Urunler menusu butun başlıkları kontrol
     Given Kullanici giris sayfasina gitmeli
     When Kullanici urunlere tiklamali
 
-  @resim
+  @resim  @smoke
   Scenario Outline: Urunler Beyaz Esya sekmesinde bütün seçenekleri tek tek kontrol etme
     And Kullanici once "<Tab>" sonra "<Module>" tiklamali
 

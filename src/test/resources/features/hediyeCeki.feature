@@ -1,6 +1,6 @@
  Feature: Hediye ceklerini kontrol
 
-  @cek
+  @cek  @smoke
   Scenario: Hediye cekleri kontrol etme
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali

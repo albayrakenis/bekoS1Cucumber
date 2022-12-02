@@ -1,6 +1,6 @@
 Feature: Urun Highlighted Ozellikleri
 
-  @high
+  @high @smoke
   Scenario Outline: Urun highlighted ozelliklerinin kontrolu
     Given Kullanici giris sayfasina gitmeli
     When Kullanici urunlere tiklamali

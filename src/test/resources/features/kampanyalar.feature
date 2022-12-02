@@ -1,6 +1,6 @@
 Feature: Kampanyalar ekranini kontrol etme
 
-  @kamp
+  @kamp @smoke
   Scenario: Kampanyalar ekrani tab'lari kontrol etme
     Given Kullanici giris sayfasina gitmeli
     When Kullanici kampanyalari tiklamali
