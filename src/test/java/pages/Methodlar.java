@@ -190,6 +190,42 @@ public class Methodlar {
         BrowserUtils.clickWithJS(adresiKaydet);
 
     }
+    public void plpSayfasinaGitme(String kategori,String baslik){
+        satinAl.urunler.click();
+        BrowserUtils.waitFor(1);
+        WebElement AnasayfaKategoriIsmi = Driver.get().findElement(By.xpath("//span[.='" + kategori + "']"));
+        BrowserUtils.hover(AnasayfaKategoriIsmi);
+
+        WebElement AnasayfaUrunIsmi = Driver.get().findElement(By.xpath("//span[.='" + baslik + "']"));
+        BrowserUtils.waitFor(1);
+        AnasayfaUrunIsmi.click();
+    }
+
+    public void plpSayfasindaFavorilereEkleme(String kategori, String baslik, String urunAdi){
+        satinAl.urunler.click();
+        BrowserUtils.waitFor(1);
+        WebElement AnasayfaKategoriIsmi = Driver.get().findElement(By.xpath("//span[.='" + kategori + "']"));
+        BrowserUtils.hover(AnasayfaKategoriIsmi);
+
+        WebElement AnasayfaUrunIsmi = Driver.get().findElement(By.xpath("//span[.='" + baslik + "']"));
+        BrowserUtils.waitFor(1);
+        AnasayfaUrunIsmi.click();
+
+        WebElement secilenUrunUcNokta = Driver.get().findElement(By.cssSelector("[data-title='" + urunAdi + "']"));
+        BrowserUtils.scrollToElement(secilenUrunUcNokta);
+        BrowserUtils.clickWithJS(secilenUrunUcNokta);
+        plp.favorilereEklemeYildizi.click();
+
+    }
+
+    public void favorilerdeUrunArama(String urunAdi){
+        List<WebElement> favorilenenUrunler = Driver.get().findElements(By.xpath("//div[@class='fav-name']"));
+        for (WebElement favoriUrun : favorilenenUrunler) {
+            System.out.println(favoriUrun.getText());
+            Assert.assertTrue(favoriUrun.getText().contains(urunAdi));
+        }
+
+    }
 
 
 }

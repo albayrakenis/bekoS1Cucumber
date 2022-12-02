@@ -13,7 +13,7 @@ public class Test04_HeaderMenu {
     @When("Kullanici once {string} sonra {string} tiklamali")
     public void kullanici_once_sonra_tiklamali(String kategoriAdi, String baslik) {
        methodlar.urunSayfasiKontrol(kategoriAdi,baslik);
-        Driver.closeDriver();
+
 
 
     }

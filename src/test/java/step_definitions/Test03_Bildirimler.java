@@ -47,6 +47,7 @@ public class Test03_Bildirimler {
 
     @When("Kullanici favorilerim sekmesine tiklamali")
     public void kullanici_favorilerim_sekmesine_tiklamali() throws InterruptedException {
+        anasayfa.hesabimButton.click();
         bildirimler.favorilerim.click();
         Thread.sleep(500);
     }

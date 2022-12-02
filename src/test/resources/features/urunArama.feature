@@ -1,7 +1,7 @@
 Feature: Urun arama islemleri
 
 
-  @urunarama
+  @urunarama @smoke
   Scenario: Urun arama islemlerinin dogru calismasi
     Given Kullanici giris sayfasina gitmeli
     When Ana sayfada arama butonuna tikla

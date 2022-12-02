@@ -16,5 +16,14 @@ public class PLP extends BasePage {
     @FindBy(xpath = "//li[.='Ürünler']")
     public WebElement footerUrunler;
 
+    @FindBy(css = ".icon-star")
+    public WebElement favorilereEklemeYildizi;
+
+    @FindBy(xpath = "//button[@id='g-recaptcha-btn-favourite']/span[1]")
+    public WebElement favorilerimdenCikarText;
+
+    @FindBy(css = "#prd_popup > .mnp-header .icon")
+    public WebElement favorilereEklemePopupKapatma;
+
 
 }

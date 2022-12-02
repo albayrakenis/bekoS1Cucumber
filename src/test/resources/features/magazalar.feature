@@ -3,7 +3,7 @@ Feature: Magazalar dogru sekilde ekrana gelmeli
   Background:
     Given Kullanici giris sayfasina gitmeli
 
-  @magazalar
+  @magazalar @smoke
   Scenario Outline:Kullanici login olup il secip magazaları dogru sekilde görmeli
     When Kullanici login olmali
     And Kullanici magazalar sayfasina gitmeli
@@ -16,7 +16,7 @@ Feature: Magazalar dogru sekilde ekrana gelmeli
       | KOCAELİ |
       | ERZURUM |
 
-  @magazalar
+  @magazalar @smoke
   Scenario Outline:Kullanici login olup il ve ilce secip magazaları dogru sekilde görmeli
     And Kullanici magazalar sayfasina gitmeli
     And Kullanici "<il>" ve "<ilce>" secip magaza aramali sonuclari kontrol etmeli

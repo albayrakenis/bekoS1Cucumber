@@ -3,6 +3,8 @@ package step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pages.Login;
 import utility.BrowserUtils;
 import utility.ConfigurationReader;
@@ -23,7 +25,10 @@ public class Test01_LoginTest {
         Driver.get().get(ConfigurationReader.get("url"));
         Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+//        WebElement cerezleriKabulEt = Driver.get().findElement(By.id("onetrust-accept-btn-handler"));
+//        if(cerezleriKabulEt.isEnabled()){
+//            cerezleriKabulEt.click();
+//        }
     }
 
     @Then("Kullanici su sayfaya gelmeli {string}")
