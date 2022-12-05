@@ -101,7 +101,8 @@ public class Methodlar {
         BrowserUtils.waitFor(1);
         AnasayfaUrunIsmi.click();
         BrowserUtils.waitFor(1);
-        WebElement sepeteEklenecekUrun = Driver.get().findElement(By.cssSelector("[title='" + urunAdi + "'] [data-order='2']"));
+       // WebElement sepeteEklenecekUrun = Driver.get().findElement(By.cssSelector("[title='" + urunAdi + "'] [data-order='2']"));
+        WebElement sepeteEklenecekUrun = Driver.get().findElement(By.cssSelector("[title='"+urunAdi+"'] .swiper-slide-next"));
         BrowserUtils.waitFor(3);
         BrowserUtils.scrollToElement(sepeteEklenecekUrun);
         BrowserUtils.clickWithJS(sepeteEklenecekUrun);
