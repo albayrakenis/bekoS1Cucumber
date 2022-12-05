@@ -65,6 +65,8 @@ public class SatinAl {
     @FindBy(id = "actionEntry_0")
     public WebElement sepettenSil;
 
+    @FindBy(xpath = "//button[contains(.,'EFT/Havale')]")
+    public WebElement eftHavale;
 
 
 

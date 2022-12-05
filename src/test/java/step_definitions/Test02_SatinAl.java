@@ -62,5 +62,11 @@ public class Test02_SatinAl {
     }
 
 
-
+    @Then("Kullanici eft havale ile odemeyi tamamlamali")
+    public void kullaniciEftHavaleIleOdemeyiTamamlamali() {
+        BrowserUtils.scrollToElement(satinAl.eftHavale);
+        BrowserUtils.clickWithJS(satinAl.eftHavale);
+        satinAl.onBilgilendirme.click();
+        satinAl.mesafeliSatisSozlesmesi.click();
+    }
 }
