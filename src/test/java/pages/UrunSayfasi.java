@@ -20,6 +20,7 @@ public class UrunSayfasi extends BasePage{
     @FindBy(css = ".js-remove-cart-entries")
     public WebElement sepetiBosaltTusu;
 
-
+    @FindBy(css = ".btn-light")
+    public WebElement stogaGelinceHaberVer;
 
 }
