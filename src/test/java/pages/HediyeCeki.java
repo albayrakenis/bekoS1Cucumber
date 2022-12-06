@@ -9,4 +9,25 @@ public class HediyeCeki extends BasePage{
 
     @FindBy(xpath = "//span[@class='js-prd-name']")
     public List<WebElement> hediyeCekListesi;
+
+    @FindBy(xpath = "//input[@id='j_username']")
+    public WebElement hediyeCekiAdSoyad;
+
+    @FindBy(xpath = "//input[@id='j_tel']")
+    public WebElement hediyeCekiTelefon;
+
+    @FindBy(xpath = "//input[@id='J_mail']")
+    public WebElement hediyeCekiEmail;
+
+    @FindBy(xpath = "//button[@id='save']")
+    public WebElement hediyeCekiKaydet;
+
+    @FindBy(xpath = "//button[@id='edit']")
+    public WebElement hediyeCekiDuzenle;
+
+    @FindBy(css = ".js-remove-cart-entries")
+    public WebElement sepetiBosalt;
+
+    @FindBy(css = ".cart-plh-top > b")
+    public WebElement sepetteUrunYok;
 }

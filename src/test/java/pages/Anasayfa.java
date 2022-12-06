@@ -57,6 +57,8 @@ public class Anasayfa {
     @FindBy(xpath = "//a[contains(.,'Mağaza Ara')]")
     public WebElement magazaAraButonu;
 
+    @FindBy(xpath = "//a[@href='/100kadinbayi']")
+    public WebElement yuzKadinBayi;
 
 
 
