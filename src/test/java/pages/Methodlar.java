@@ -3,7 +3,6 @@ package pages;
 import com.github.javafaker.Faker;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -25,6 +24,8 @@ public class Methodlar {
     UrunSayfasi urunSayfasi = new UrunSayfasi();
     Anasayfa anasayfa = new Anasayfa();
     Faker faker =new Faker();
+    HediyeCeki hediyeCeki=new HediyeCeki();
+
 
 
     public void getText(WebElement element) {
@@ -91,7 +92,7 @@ public class Methodlar {
     }
 
 
-    public void satinAlma(String kategoriAdi, String baslikAdi, String urunAdi) {
+    public void urunSayfasinaGitme(String kategoriAdi, String baslikAdi, String urunAdi) {
         satinAl.urunler.click();
         BrowserUtils.waitFor(1);
         WebElement AnasayfaKategoriIsmi = Driver.get().findElement(By.xpath("//span[.='" + kategoriAdi + "']"));
@@ -102,7 +103,8 @@ public class Methodlar {
         AnasayfaUrunIsmi.click();
         BrowserUtils.waitFor(1);
        // WebElement sepeteEklenecekUrun = Driver.get().findElement(By.cssSelector("[title='" + urunAdi + "'] [data-order='2']"));
-        WebElement sepeteEklenecekUrun = Driver.get().findElement(By.cssSelector("[title='"+urunAdi+"'] .swiper-slide-next"));
+       // WebElement sepeteEklenecekUrun = Driver.get().findElement(By.cssSelector("[title='"+urunAdi+"'] .swiper-slide-next"));
+        WebElement sepeteEklenecekUrun = Driver.get().findElement(By.xpath("//div[@class='products productgridcomponent-page']//div[@class='swiper-slide slide-active swiper-slide-active']//img[@alt='"+urunAdi+"']"));
         BrowserUtils.waitFor(3);
         BrowserUtils.scrollToElement(sepeteEklenecekUrun);
         BrowserUtils.clickWithJS(sepeteEklenecekUrun);
@@ -225,6 +227,15 @@ public class Methodlar {
             System.out.println(favoriUrun.getText());
             Assert.assertTrue(favoriUrun.getText().contains(urunAdi));
         }
+
+    }
+
+    public void hediyeCekiBilgireniDoldurma(){
+        hediyeCeki.hediyeCekiAdSoyad.sendKeys(faker.name().fullName());
+        hediyeCeki.hediyeCekiTelefon.sendKeys("05000000000");
+        hediyeCeki.hediyeCekiEmail.sendKeys("2albay.rakenis@gmail.com");
+        BrowserUtils.waitFor(1);
+        BrowserUtils.clickWithJS(hediyeCeki.hediyeCekiKaydet);
 
     }
 

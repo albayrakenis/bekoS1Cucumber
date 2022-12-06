@@ -3,8 +3,10 @@ package step_definitions;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import utility.BrowserUtils;
 import utility.Driver;
 
+import java.text.BreakIterator;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
@@ -17,6 +19,7 @@ public class Hooks {
     @After
     public void tearDown()
     {
-      //  Driver.closeDriver();
+        BrowserUtils.waitFor(2);
+       // Driver.closeDriver();
     }
 }

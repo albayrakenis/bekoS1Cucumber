@@ -21,7 +21,7 @@ public class Test02_SatinAl {
     @When("Kullanici urun secmeli {string} {string} {string}")
     public void kullaniciUrunSecmeli(String kategoriAdi, String baslikAdi,String urunAdi) {
 
-        methodlar.satinAlma(kategoriAdi,baslikAdi,urunAdi);
+        methodlar.urunSayfasinaGitme(kategoriAdi,baslikAdi,urunAdi);
 
 
     }
