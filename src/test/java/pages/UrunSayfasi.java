@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class UrunSayfasi extends BasePage{
 
     @FindBy(xpath = "//span[contains(.,'Ana Sayfa')]")
@@ -22,5 +24,30 @@ public class UrunSayfasi extends BasePage{
 
     @FindBy(css = ".btn-light")
     public WebElement stogaGelinceHaberVer;
+
+    @FindBy(xpath = "//input[@id='sr_email']")
+    public WebElement stokHabercimEposta;
+
+    @FindBy(css = ".js-stock-reminder-btn")
+    public WebElement stokHabercimMailGonder;
+
+    @FindBy(xpath = "//div[.='Talebiniz Alındı.Teşekkür Ederiz.']")
+    public WebElement stokHabercimTalebinizAlinmistir;
+
+    @FindBy(xpath = "//a[contains(.,'Stok Habercim')]")
+    public WebElement stokHabercimeGit;
+
+    @FindBy(xpath = "//button[.='Hangi Mağazada Var']")
+    public WebElement hangiMagazadaVar;
+
+    @FindBy(css = ".js-find-store-btn")
+    public WebElement MagazaBul;
+
+    @FindBy(xpath = "//div[@class='srv-address']")
+    public List<WebElement> magazaBulSonuclari;
+
+    @FindBy(xpath = "//div[@class='srv-distance']")
+    public List<WebElement> magazaBulSonuclarikm;
+
 
 }
