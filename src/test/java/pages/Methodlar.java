@@ -104,7 +104,8 @@ public class Methodlar {
         BrowserUtils.waitFor(1);
        // WebElement sepeteEklenecekUrun = Driver.get().findElement(By.cssSelector("[title='" + urunAdi + "'] [data-order='2']"));
        // WebElement sepeteEklenecekUrun = Driver.get().findElement(By.cssSelector("[title='"+urunAdi+"'] .swiper-slide-next"));
-        WebElement sepeteEklenecekUrun = Driver.get().findElement(By.xpath("//div[@class='products productgridcomponent-page']//div[@class='swiper-slide slide-active swiper-slide-active']//img[@alt='"+urunAdi+"']"));
+       //()WebElement sepeteEklenecekUrun = Driver.get().findElement(By.xpath("//div[@class='products productgridcomponent-page']//div[@class='swiper-slide slide-active swiper-slide-active']//img[@alt='"+urunAdi+"']"));
+        WebElement sepeteEklenecekUrun = Driver.get().findElement(By.cssSelector("[title='"+urunAdi+"']"));
         BrowserUtils.waitFor(3);
         BrowserUtils.scrollToElement(sepeteEklenecekUrun);
         BrowserUtils.clickWithJS(sepeteEklenecekUrun);

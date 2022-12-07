@@ -180,7 +180,6 @@ public class BeyazEsya {
     public WebElement solPanel;
 
     @FindBy(xpath = "(//span[@class='js-prd-cat'])")
-    //@FindBy(xpath = "(//div[@class='swiper-slide slide-active swiper-slide-active'])")
     public List <WebElement> urunIsimleri;
 
 
