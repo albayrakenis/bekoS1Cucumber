@@ -49,5 +49,7 @@ public class UrunSayfasi extends BasePage{
     @FindBy(xpath = "//div[@class='srv-distance']")
     public List<WebElement> magazaBulSonuclarikm;
 
+    @FindBy(xpath = "//div[@class='banner bnr-static bnr-left']//div[@class='bnr-title']")
+    public List<WebElement> saglikliLezzetlerListesi;
 
 }

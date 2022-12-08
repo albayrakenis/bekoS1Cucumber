@@ -31,5 +31,4 @@ public class Test16_SaglikliTarifler {
         }
 
 
-
 }
