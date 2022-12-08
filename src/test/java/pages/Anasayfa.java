@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utility.Driver;
 
+import java.util.List;
+
 public class Anasayfa {
 
     public Anasayfa(){
@@ -60,6 +62,13 @@ public class Anasayfa {
     @FindBy(xpath = "//a[@href='/100kadinbayi']")
     public WebElement yuzKadinBayi;
 
+    @FindBy(xpath = "//a[@href='/evimize-saglik/tarifler']")
+    public WebElement saglikliTarifler;
 
+    @FindBy(xpath = "//div[@data-optimize-type='BESTSELLER']")
+    public List<WebElement> cokSatanUrunlerListesi;
+
+    @FindBy(css = ".col-top > [href='/destek']")
+    public WebElement destekButton;
 
 }
