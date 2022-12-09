@@ -1,5 +1,6 @@
 package step_definitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -47,5 +48,11 @@ public class Test09_Kampanyalar {
         System.out.println("Kategori adı=  " + anasayfa.kampanyalarText.getText());
         BrowserUtils.waitFor(1);
         Assert.assertEquals("Kampanyalar",anasayfa.kampanyalarText.getText());
+    }
+
+    @And("Kullanici telefon numarasi yazip numarasini dogruyabilmeli")
+    public void kullaniciTelefonNumarasiYazipNumarasiniDogruyabilmeli() {
+        anasayfa.kampanyalarTelefonNoDogrulama.sendKeys("071552594");
+        BrowserUtils.clickWithJS(anasayfa.sizeOzelTelefonNumarasiDogrulama);
     }
 }

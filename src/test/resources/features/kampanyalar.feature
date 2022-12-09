@@ -10,3 +10,5 @@ Feature: Kampanyalar ekranini kontrol etme
     And Kullanici size ozeli tiklamali
     And Kullanici tum kampanyalari tiklamali
     Then Kullanici kampanyalar yazisini gormeli
+    And Kullanici size ozeli tiklamali
+    And Kullanici telefon numarasi yazip numarasini dogruyabilmeli

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import utility.BrowserUtils;
+import utility.ConfigurationReader;
 import utility.Driver;
 
 import java.util.List;
@@ -238,6 +239,27 @@ public class Methodlar {
         BrowserUtils.waitFor(1);
         BrowserUtils.clickWithJS(hediyeCeki.hediyeCekiKaydet);
 
+    }
+
+    public void anasayfaKisayollari(String kategori){
+        WebElement anasayfaKategori = Driver.get().findElement(By.xpath("//a[@href='"+kategori+"']"));
+        BrowserUtils.scrollToElement(anasayfaKategori);
+        BrowserUtils.clickWithJS(anasayfaKategori);
+
+    }
+
+    public void krediKartBilgileriniDoldurma(){
+        satinAl.krediKartiNumarasi.sendKeys(ConfigurationReader.get("krediKartiNumarasi"));
+        satinAl.krediKartiSahibi.sendKeys(faker.name().fullName());
+        BrowserUtils.waitFor(2);
+        satinAl.krediKartiTarih.sendKeys("1230");
+        satinAl.krediKartiCvv.sendKeys("000");
+        satinAl.onBilgilendirme.click();
+        satinAl.mesafeliSatisSozlesmesi.click();
+    }
+    public void onBilgilendirmeVeSatisSozlesmesiOnaylama(){
+        satinAl.onBilgilendirme.click();
+        satinAl.mesafeliSatisSozlesmesi.click();
     }
 
 
