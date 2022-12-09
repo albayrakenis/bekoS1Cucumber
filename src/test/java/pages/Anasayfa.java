@@ -71,4 +71,19 @@ public class Anasayfa {
     @FindBy(css = ".col-top > [href='/destek']")
     public WebElement destekButton;
 
+    @FindBy(xpath = "//div[@class='banner bnr-cover bnr-left bnr-icon bnr-gr-2']//h1[@class='bnr-title']")
+    public List<WebElement> anasayfaSponsorlukListesi;
+
+    @FindBy(xpath = "//p[.='Sponsorluklar']")
+    public WebElement sponsorlukYazisi;
+
+    @FindBy(xpath = "//input[@id='otpromo_mobile']")
+    public WebElement kampanyalarTelefonNoDogrulama;
+
+    @FindBy(xpath = "//button[@class='btn btn-outline-primary btn-narrow js-send-otp']")
+    public WebElement sizeOzelTelefonNumarasiDogrulama;
+
+    @FindBy(xpath = "//div[@class='logo']//img[1]")
+    public WebElement anasayfadaBekoIcon;
+
 }
