@@ -1,6 +1,6 @@
 Feature: Anasayfada ki kısayolları kontrol
 
-  @kisayol
+  @kisayol @smoke
   Scenario: Kullanici anasayfadaki kısayolları kullanarak hızlı bir sekilde menulere gidebilmeli
     Given Kullanici giris sayfasina gitmeli
     When Kullanici anasayfadaki "beyaz-esya" basligina gitmeli

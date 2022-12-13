@@ -7,7 +7,7 @@ Feature: Adres ekleme
   @adres2 @smoke
   Scenario Outline: Kullanici basarili bir sekilde adres ekleyebilmeli
     And Kullanici adres bilgilerini tam olarak girmeli "<il>" "<ilce>" "<mahalle>"
-    And Kullanici cikis yap sekmesine tiklamali
+
 
     Examples:
       | il      | ilce    | mahalle |
@@ -19,7 +19,7 @@ Feature: Adres ekleme
   Scenario Outline: Kullanici adres bilgilerini eksik girmeli
     And Kulanici adres bilgilerini eksik girmeli "<adSoyad>" "<telefonNumarasi>"
     And Kullanici adres ekleme popup kapatmali
-    And Kullanici cikis yap sekmesine tiklamali
+
 
     Examples:
       | adSoyad | telefonNumarasi |
