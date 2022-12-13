@@ -1,6 +1,6 @@
 Feature: Kullanici sponsorluklari gormeli
 
-  @sponsor
+  @sponsor @smoke
   Scenario: Kullanici sponsorluklari gorebilmeli
     Given Kullanici giris sayfasina gitmeli
     When Kullanici asagidaki sponsorluk listesini gormeli

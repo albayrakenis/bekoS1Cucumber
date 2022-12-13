@@ -1,6 +1,6 @@
 Feature: Kullanici 100 kadi bayi formunu görmeli ve doldurabilmeli
 
-  @bayi
+  @bayi @smoke
   Scenario: Kullanici 100 kadi bayi formunu görmeli ve doldurabilmeli
 
     Given Kullanici giris sayfasina gitmeli

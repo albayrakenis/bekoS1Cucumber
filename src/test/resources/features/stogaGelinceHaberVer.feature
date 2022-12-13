@@ -1,6 +1,6 @@
 Feature: Stoga gelince haber ver
 
-  @stokTakip
+  @stokTakip @smoke
   Scenario: Kullanici stogu biten urun icin alarm kurabilmeli
     Given Kullanici giris sayfasina gitmeli
     When Kullanici "Elektronik" "Masaüstü Bilgisayar" "Lenovo AIO3-22 I3 4G/128GBBilgisayar" gitmeli
