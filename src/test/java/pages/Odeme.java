@@ -10,6 +10,7 @@ import utility.Driver;
 public class Odeme extends BasePage{
 
     Faker faker =new Faker();
+    static Odeme odeme =new Odeme();
 
     public void odemeYontemiBelirle(String str){
         WebElement odemeYontemi = Driver.get().findElement(By.xpath("//button[contains(.,'" + str + "')]"));
@@ -37,7 +38,7 @@ public class Odeme extends BasePage{
 
     public void cokluKrediKartiIleOdeme(String kartNumarasi){
         cokluKartKrediKartiNumarasi.sendKeys(kartNumarasi);
-        cokluKartKartUzerindekiIsim.sendKeys(faker.name().fullName());
+        cokluKartKartUzerindekiIsim.sendKeys("enes bayrak");
         cokluKartSonKullanmaTarihi.sendKeys("1230");
         cokluKartCvv.sendKeys("000");
 
@@ -45,8 +46,21 @@ public class Odeme extends BasePage{
     @FindBy(xpath = "//input[@name='partialAmount']")
     public WebElement ilkKrediKartiOdemeMiktari;
 
-    @FindBy(css = ".btn-mcard-pay")
+    @FindBy(xpath = "//button[@class='btn btn-outline-primary btn-mcard-pay js-confirm-mcard-step']")
     public WebElement kartiOnaylaCokluKart;
 
+    @FindBy(css = ".result-grid-header > .t")
+    public WebElement siparisinizBizeUlastiEftOdeme;
+
+    @FindBy(css = ".result-grid-header > .p")
+    public WebElement siparisNumarasi;
+
+    public static String  siparisNumarasiAlma(){
+        String siparisNumarasi = odeme.siparisNumarasi.getAttribute("innerText");
+        int a=siparisNumarasi.indexOf(": ");
+
+        String substring = siparisNumarasi.substring(a + 2);
+        return substring;
+    }
 
 }

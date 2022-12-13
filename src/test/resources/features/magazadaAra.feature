@@ -1,6 +1,6 @@
 Feature: Magazada ara fonksiyonu kontrol
 
-  @magazdaAra
+  @magazdaAra @smoke
   Scenario: Magazada ara fonksiyonunu calismali
     Given Kullanici giris sayfasina gitmeli
     When Kullanici "Beyaz Eşya" "Çamaşır Makinesi" "CM 9140 BMGÇamaşır Makinesi" gitmeli

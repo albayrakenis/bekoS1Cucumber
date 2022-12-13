@@ -1,6 +1,6 @@
 Feature: Saglık tarifler
 
-  @saglik
+  @saglik @smoke
   Scenario: Saglikli tarifler sayfasi
     Given Kullanici giris sayfasina gitmeli
     And Kullanici saglikli tarifler sayfasina gitmeli

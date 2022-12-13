@@ -1,7 +1,7 @@
 Feature: Urun satin alma
 
 
-  @satinal
+  @satinal @smoke
   Scenario Outline: Kredi karti ile urun satin alma
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali
@@ -16,7 +16,7 @@ Feature: Urun satin alma
       | Isıtma Soğutma | Klima     | 40965 HP Aktif Hijyen Plus InverterSplit Klima |
 #      | Elektronik |  Masaüstü Bilgisayar    | Lenovo DT IC 3 07ADA05 A3050U 256GB 4G Masaüstü Bilgisayar|
 
-  @eft
+  @eft @smoke
   Scenario Outline: Havale ile urun satin alma
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali

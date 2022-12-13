@@ -1,6 +1,6 @@
 Feature: Destek sayfası kontrolu
 
-  @destek
+  @destek @smoke
   Scenario: Kullanici destek sayfasindan servis bulabilmeli
     Given Kullanici giris sayfasina gitmeli
     And Kullanici destek sayfasina gitmeli

@@ -258,8 +258,12 @@ public class Methodlar {
         satinAl.mesafeliSatisSozlesmesi.click();
     }
     public void onBilgilendirmeVeSatisSozlesmesiOnaylama(){
-        satinAl.onBilgilendirme.click();
-        satinAl.mesafeliSatisSozlesmesi.click();
+
+        BrowserUtils.scrollToElement(satinAl.onBilgilendirme);
+        BrowserUtils.clickWithJS(satinAl.onBilgilendirme);
+        BrowserUtils.scrollToElement(satinAl.mesafeliSatisSozlesmesi);
+        BrowserUtils.clickWithJS(satinAl.mesafeliSatisSozlesmesi);
+
     }
 
 
