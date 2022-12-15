@@ -1,7 +1,9 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utility.Driver;
 
 public class PLP extends BasePage {
 
@@ -24,6 +26,10 @@ public class PLP extends BasePage {
 
     @FindBy(css = "#prd_popup > .mnp-header .icon")
     public WebElement favorilereEklemePopupKapatma;
+
+    public void rastgeleUrunSecme(String numara){
+        Driver.get().findElement(By.xpath("(//div[@class='prd-media swiper-multiple-product-image activeted'])["+numara+"]"));
+    }
 
 
 }

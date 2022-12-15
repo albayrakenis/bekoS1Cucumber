@@ -74,7 +74,7 @@ public class Methodlar {
 
         WebElement AnasayfaUrunIsmi = Driver.get().findElement(By.xpath("//span[.='" + baslikAdi + "']"));
         BrowserUtils.waitFor(1);
-        AnasayfaUrunIsmi.click();
+        BrowserUtils.clickWithJS(AnasayfaUrunIsmi);
         WebElement sonucSayisi = plp.plpdeBulunanSonucSayisi;
         System.out.println(plp.aramaSonucSafyasiSolTarafKategoriAdi.getText());
 
@@ -87,7 +87,7 @@ public class Methodlar {
             }
         }
         Assert.assertEquals("kategori adı ve pdp ekranı aynı", baslikAdi, plp.aramaSonucSafyasiSolTarafKategoriAdi.getText());
-
+        System.out.println("kategoriAdi = " + kategoriAdi);
         System.out.println("urunAdi = " + baslikAdi);
         System.out.println("sol panel = " + plp.aramaSonucSafyasiSolTarafKategoriAdi.getText());
     }
