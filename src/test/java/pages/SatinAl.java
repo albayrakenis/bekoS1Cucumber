@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import utility.Driver;
 
 public class SatinAl {
+    
 
     public SatinAl(){
         PageFactory.initElements(Driver.get(),this);
@@ -67,6 +68,9 @@ public class SatinAl {
 
     @FindBy(xpath = "//button[contains(.,'EFT/Havale')]")
     public WebElement eftHavale;
+
+    @FindBy(xpath = "//button[@id='yes']")
+    public WebElement odemeOnaylama;
 
 
 

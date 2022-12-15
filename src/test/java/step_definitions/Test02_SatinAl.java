@@ -1,6 +1,7 @@
 package step_definitions;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.Methodlar;
@@ -68,5 +69,11 @@ public class Test02_SatinAl {
         BrowserUtils.clickWithJS(satinAl.eftHavale);
         satinAl.onBilgilendirme.click();
         satinAl.mesafeliSatisSozlesmesi.click();
+    }
+
+    @And("Kullanici odemeyi onaylamali")
+    public void kullaniciOdemeyiOnaylamali() {
+        BrowserUtils.clickWithJS(satinAl.alisverisiTamamla);
+        BrowserUtils.clickWithJS(satinAl.odemeOnaylama);
     }
 }

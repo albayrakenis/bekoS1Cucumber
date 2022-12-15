@@ -8,7 +8,8 @@ Feature: Urun satin alma
     And Kullanici urun secmeli "<kategoriAdi>" "<baslikAdi>" "<urunAdi>"
     And Kullanici sepete eklemeli
     And Kullanici odeme adimina gitmeli
-    Then Kullanici kart bilgilerini girmeli
+    And Kullanici kart bilgilerini girmeli
+    And Kullanici odemeyi onaylamali
 
 
     Examples:
