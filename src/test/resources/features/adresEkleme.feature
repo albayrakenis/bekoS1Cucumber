@@ -18,7 +18,7 @@ Feature: Adres ekleme
   @adres  @smoke
   Scenario Outline: Kullanici adres bilgilerini eksik girmeli
     And Kulanici adres bilgilerini eksik girmeli "<adSoyad>" "<telefonNumarasi>"
-    And Kullanici adres ekleme popup kapatmali
+
 
 
     Examples:
