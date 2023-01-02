@@ -8,6 +8,9 @@ public class Hesabim {
     @FindBy(css = ".js-popup-trigger-func")
     public WebElement silmeyiOnayliyormusunuzButonu;
 
+    @FindBy(xpath = "//button[@class='btn btn-outline-dark js-popup-trigger-func']")
+    public WebElement sil;
+
     @FindBy(xpath = "//div[@class='usr-addresses']/div[1]//a[contains(.,'Sil')]")
     public WebElement ilkAdresSilButonu;
 

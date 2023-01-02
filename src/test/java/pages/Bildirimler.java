@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utility.Driver;
 
+import java.util.List;
+
 public class Bildirimler {
 
     public Bildirimler(){
@@ -64,6 +66,9 @@ public class Bildirimler {
 
     @FindBy(xpath = "//div[@class='container-max-1200 no-pad']//a[contains(@href,'/logout')]")
     public WebElement cikisYap;
+
+    @FindBy(xpath = "//div[@class='usr-addresses']/div//a[contains(.,'Sil')]")
+    public List<WebElement> adresListesi;
 
 
 }
