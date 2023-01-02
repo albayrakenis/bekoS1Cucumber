@@ -51,7 +51,7 @@ public class Login {
         username.sendKeys("2albay.rakenis@gmail.com");
         //username.sendKeys("2.albayrakeni.s@gmail.com");
         Thread.sleep(1500);
-        password.sendKeys("gebze1993");
+        password.sendKeys("Albayrak.41");
         //password.sendKeys("Albayrak.41");
         Thread.sleep(1000);
         BrowserUtils.clickWithJS(girisYapButonu);
