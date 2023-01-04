@@ -16,7 +16,7 @@ public class Test03_Bildirimler {
     public void kullanici_bildirimleri_tiklamali() throws InterruptedException {
         BrowserUtils.waitFor(2);
         bildirimler.bildirimIcon.click();
-        bildirimler.tumunuGor.click();
+        BrowserUtils.clickWithJS(bildirimler.tumunuGor);
 
     }
 
@@ -72,7 +72,7 @@ public class Test03_Bildirimler {
 
     @When("Kullanici bilgilerim sekmesine tiklamali")
     public void kullanici_bilgilerim_sekmesine_tiklamali() throws InterruptedException {
-        bildirimler.bilgilerim.click();
+        BrowserUtils.clickWithJS(bildirimler.bilgilerim);
         Thread.sleep(500);
     }
 

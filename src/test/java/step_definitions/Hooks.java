@@ -20,6 +20,6 @@ public class Hooks {
     public void tearDown()
     {
         BrowserUtils.waitFor(2);
-       // Driver.closeDriver();
+        Driver.closeDriver();
     }
 }

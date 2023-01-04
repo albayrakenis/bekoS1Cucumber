@@ -3,7 +3,9 @@ package step_definitions;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import pages.*;
 import utility.BrowserUtils;
 import utility.Driver;
@@ -61,17 +63,18 @@ public class Test06_AdresEkleme extends BasePage {
 
     @And("Son adres haric butun adresleri silebilmeli")
     public void sonAdresHaricButunAdresleriSilebilmeli() {
-        List<WebElement> adresListesi = Driver.get().findElements(By.xpath("//div[@class='usr-addresses']/div//a[contains(.,'Sil')]"));
+
+        Actions actions =new Actions(Driver.get());
 
 
-        int adresSayisi=adresListesi.size();
-        for (int i=1; i<adresSayisi-1;i++){
-            BrowserUtils.clickWithJS(hesabim.ilkAdresSilButonu);
-            BrowserUtils.clickWithJS(hesabim.silmeyiOnayliyormusunuzButonu);
 
-            BrowserUtils.waitFor(2);
-        }
-        System.out.println(adresListesi.size());
+        BrowserUtils.clickWithJS(bildirimler.adresListesi.get(0));
+
+        actions.click(hesabim.sil).perform();
+        //BrowserUtils.clickWithJS(hesabim.sil);
+        BrowserUtils.clickWithJS(bildirimler.adresListesi.get(1));
+        BrowserUtils.clickWithJS(hesabim.silmeyiOnayliyormusunuzButonu);
+        System.out.println(bildirimler.adresListesi.size());
 
 
     }

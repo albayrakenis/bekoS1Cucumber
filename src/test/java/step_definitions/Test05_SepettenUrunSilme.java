@@ -5,6 +5,7 @@ import org.junit.Assert;
 import pages.Anasayfa;
 import pages.Methodlar;
 import pages.UrunSayfasi;
+import utility.BrowserUtils;
 
 public class Test05_SepettenUrunSilme {
     Methodlar methodlar =new Methodlar();
@@ -35,7 +36,9 @@ public class Test05_SepettenUrunSilme {
 
     @And("Kullanici sepeti bosalt tusuna basabilmeli")
     public void kullaniciSepetiBosaltTusunaBasabilmeli() {
-        anasayfa.anasayfaSepetIcon.click();
-        urunSayfasi.sepetiBosaltTusu.click();
+        BrowserUtils.clickWithJS(anasayfa.anasayfaSepetIcon);
+        BrowserUtils.clickWithJS(urunSayfasi.sepetiBosaltTusu);
+
+
     }
 }

@@ -1,6 +1,6 @@
 Feature: teste baslamadan once sepetin bosaltilmasi
 
-  @hazirlik
+  @hazirlik @smoke
   Scenario: Sepette urun olmamali
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali
