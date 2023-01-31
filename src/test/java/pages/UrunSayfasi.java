@@ -52,4 +52,7 @@ public class UrunSayfasi extends BasePage{
     @FindBy(xpath = "//div[@class='banner bnr-static bnr-left']//div[@class='bnr-title']")
     public List<WebElement> saglikliLezzetlerListesi;
 
+    @FindBy(xpath = "//a[contains(.,'Sepete Git')]")
+    public WebElement sepeteGitPopup;
+
 }
