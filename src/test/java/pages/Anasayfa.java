@@ -68,6 +68,9 @@ public class Anasayfa {
     @FindBy(xpath = "//div[@data-optimize-type='BESTSELLER']")
     public List<WebElement> cokSatanUrunlerListesi;
 
+    @FindBy(xpath = "//div[@id='product-swiper']//div[@class='swiper-slide slide-active swiper-slide-next']//a[contains(.,'İncele')]")
+    public WebElement cokSatanlarIkinciUrun;
+
     @FindBy(css = ".col-top > [href='/destek']")
     public WebElement destekButton;
 

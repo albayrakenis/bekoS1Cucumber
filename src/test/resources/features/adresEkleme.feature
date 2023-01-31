@@ -15,7 +15,7 @@ Feature: Adres ekleme
       | ERZURUM | İSPİR   | BOZAN   |
 
 
-  @adres  @smoke
+  @adres2  @smoke
   Scenario Outline: Kullanici adres bilgilerini eksik girmeli
     And Kulanici adres bilgilerini eksik girmeli "<adSoyad>" "<telefonNumarasi>"
 
