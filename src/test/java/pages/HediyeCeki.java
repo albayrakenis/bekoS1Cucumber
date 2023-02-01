@@ -25,9 +25,5 @@ public class HediyeCeki extends BasePage{
     @FindBy(xpath = "//button[@id='edit']")
     public WebElement hediyeCekiDuzenle;
 
-    @FindBy(css = ".js-remove-cart-entries")
-    public WebElement sepetiBosalt;
 
-    @FindBy(css = ".cart-plh-top > b")
-    public WebElement sepetteUrunYok;
 }

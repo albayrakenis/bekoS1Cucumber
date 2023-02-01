@@ -10,12 +10,15 @@ Feature: Urun satin alma
     And Kullanici odeme adimina gitmeli
     And Kullanici kart bilgilerini girmeli
     And Kullanici odemeyi onaylamali
+    And Kullanici siparis onaylandigini gormeli
 
 
     Examples:
-      | kategoriAdi    | baslikAdi | urunAdi                                        |
-      | Isıtma Soğutma | Klima     | 40965 HP Aktif Hijyen Plus InverterSplit Klima |
-#      | Elektronik |  Masaüstü Bilgisayar    | Lenovo DT IC 3 07ADA05 A3050U 256GB 4G Masaüstü Bilgisayar|
+      | kategoriAdi | baslikAdi        | urunAdi                       |
+ #     | Isıtma Soğutma | Klima     | 40965 HP Aktif Hijyen Plus InverterSplit Klima |
+ #     | Elektronik |  Masaüstü Bilgisayar    | Lenovo DT IC 3 07ADA05 A3050U 256GB 4G Masaüstü Bilgisayar|
+      | Beyaz Eşya  | Çamaşır Makinesi | BK 9122 PR MGÇamaşır Makinesi |
+
 
   @eft @smoke
   Scenario Outline: Havale ile urun satin alma
@@ -25,7 +28,8 @@ Feature: Urun satin alma
     And Kullanici sepete eklemeli
     And Kullanici odeme adimina gitmeli
     Then Kullanici eft havale ile odemeyi tamamlamali
+    And Kullanici siparis onaylandigini gormeli
 
     Examples:
-      | kategoriAdi | baslikAdi        | urunAdi                        |
+      | kategoriAdi | baslikAdi        | urunAdi                       |
       | Beyaz Eşya  | Çamaşır Makinesi | BK 9122 PR MGÇamaşır Makinesi |
