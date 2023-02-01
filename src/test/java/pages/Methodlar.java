@@ -165,15 +165,16 @@ public class Methodlar {
     public void ilIlceMahalleSecme(String il, String ilce, String mahalle){
 
         Select select = new Select(Driver.get().findElement(By.id("cityCode")));
-        select.selectByVisibleText(il);
+        select.selectByVisibleText("BURSA");
         Select selectIlce = new Select(Driver.get().findElement(By.id("townCode")));
-        selectIlce.selectByVisibleText(ilce);
+        selectIlce.selectByVisibleText("KELES");
         Select selectMahalle = new Select(Driver.get().findElement(By.id("neighborhood")));
-        selectMahalle.selectByVisibleText(mahalle);
+        selectMahalle.selectByVisibleText("AVDAN");
 
     }
     public void adresBilgileriDoldurma(){
 
+        BrowserUtils.waitFor(1);
         Driver.get().findElement(By.id("fullName")).sendKeys(faker.name().fullName());
         BrowserUtils.waitFor(2);
         Driver.get().findElement(By.id("phone")).sendKeys(faker.phoneNumber().phoneNumber());

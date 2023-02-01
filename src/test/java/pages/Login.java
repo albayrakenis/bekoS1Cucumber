@@ -58,5 +58,14 @@ public class Login {
 
         BrowserUtils.waitFor(6);
     }
+    @FindBy(xpath = "//button[@class='btn btn-light']")
+    public WebElement uyeOlmadanDevamEt;
+
+    @FindBy(xpath = "//input[@id='guest_email']")
+    public WebElement guest_email;
+
+    @FindBy(css = ".btn-guest")
+    public WebElement uyeOlmadanDevamEtButonu;
+
 
 }
