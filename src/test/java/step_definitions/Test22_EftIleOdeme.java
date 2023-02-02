@@ -1,22 +1,32 @@
 package step_definitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import pages.Methodlar;
-import pages.Odeme;
-import pages.SatinAl;
+import org.openqa.selenium.support.ui.Select;
+import pages.*;
 import utility.BrowserUtils;
+import utility.ConfigurationReader;
 import utility.Driver;
+
+import java.awt.*;
 
 public class Test22_EftIleOdeme extends Odeme {
 
     Methodlar methodlar=new Methodlar();
     SatinAl satinAl = new SatinAl();
     Odeme odeme =new Odeme();
+    Login login = new Login();
+    Sepet sepet= new Sepet();
+    Bildirimler bildirimler = new Bildirimler();
+
+    public Test22_EftIleOdeme() throws AWTException {
+    }
+
     @When("Kullanici mesafeli satis sozlesmesini onaylamali")
     public void kullanici_mesafeli_satis_sozlesmesini_onaylamali() {
         methodlar.onBilgilendirmeVeSatisSozlesmesiOnaylama();
@@ -83,6 +93,52 @@ public class Test22_EftIleOdeme extends Odeme {
 //        System.out.println("backOfficeSiparisNumarasi = " + backOfficeSiparisNumarasi);
 
         //Assert.assertTrue(siparisNumarasi.contains(backOfficeSiparisNumarasi.getText()));
+
+
+    }
+
+    @And("Kullanici uye olmadan devam etmeli")
+    public void kullaniciUyeOlmadanDevamEtmeli() {
+        Faker faker = new Faker();
+        BrowserUtils.clickWithJS(login.uyeOlmadanDevamEt);
+        login.guest_email.sendKeys(faker.name().firstName()+faker.name().lastName()+"@gmail.com");
+        BrowserUtils.clickWithJS(login.uyeOlmadanDevamEtButonu);
+    }
+
+    @And("Kullanici teslimat adresi secmeli")
+    public void kullaniciTeslimatAdresiSecmeli() {
+
+        BrowserUtils.clickWithJS(sepet.teslimatAdresiSec);
+        BrowserUtils.clickWithJS(sepet.yeniAdresEkle);
+
+    }
+
+    @And("Kullanici tc kimlik numarası girmeli")
+    public void kullaniciTcKimlikNumarasıGirmeli() {
+        BrowserUtils.waitFor(2);
+        sepet.tcKimlikNumarasi.sendKeys(ConfigurationReader.get("tc"));
+    }
+
+    @And("Kullanici adres bilgilerini olarak girmeli {string} {string} {string}")
+    public void kullaniciAdresBilgileriniOlarakGirmeli(String il, String ilce, String mahalle) {
+
+
+
+        BrowserUtils.waitFor(2);
+        methodlar.adresBilgileriDoldurma();
+        BrowserUtils.waitFor(2);
+        Assert.assertFalse(bildirimler.adresiKaydet.isDisplayed());
+        BrowserUtils.waitFor(2);
+    }
+
+    @And("Kullanici adres bilgilerini girmeli")
+    public void kullaniciAdresBilgileriniGirmeli() {
+
+        BrowserUtils.waitFor(5);
+        methodlar.ilIlceMahalleSecme("BURSA","KELES","AVDAN");
+        methodlar.adresBilgileriDoldurma();
+
+
 
 
     }

@@ -26,11 +26,11 @@ public class Test11_UrunArama {
 
     @When("Ana sayfada arama butonuna tikla")
     public void ana_sayfada_arama_butonuna_tikla() {
-
+        anasayfa.aramaMetinKutusu.click();
     }
     @When("Arama bolumune aranacak urun adini yaz")
     public void arama_bolumune_aranacak_urun_adini_yaz() {
-        anasayfa.aramaMetinKutusu.click();
+
         anasayfa.aramaTextBosluk.sendKeys(aranacakKelime);
     }
     @When("Entere bas")
@@ -39,6 +39,7 @@ public class Test11_UrunArama {
     }
     @When("Ara butonuna tikla")
     public void ara_butonuna_tikla() {
+
         anasayfa.aramaButonu.click();
     }
     @When("Gelen urunlerin isimlerini liste olarak al")

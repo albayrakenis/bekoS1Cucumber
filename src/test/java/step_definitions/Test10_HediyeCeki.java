@@ -6,10 +6,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import pages.Anasayfa;
-import pages.HediyeCeki;
-import pages.Methodlar;
-import pages.SatinAl;
+import pages.*;
 import utility.BrowserUtils;
 import utility.Driver;
 
@@ -21,6 +18,8 @@ public class Test10_HediyeCeki {
     SatinAl satinAl = new SatinAl();
     HediyeCeki hediyeCeki =new HediyeCeki();
     Methodlar methodlar =new Methodlar();
+
+    Sepet sepet = new Sepet();
 
 
     @When("Kullanici hediye cekine tiklamali")
@@ -63,14 +62,14 @@ public class Test10_HediyeCeki {
     @When("Kullanici hediye cekini silmeli")
     public void kullanici_hediye_cekini_silmeli() {
         BrowserUtils.waitFor(2);
-        hediyeCeki.sepetiBosalt.click();
+        sepet.sepetiBosalt.click();
     }
 
     @Then("Kullanici sepetin bos oldugunu kontrol etmeli")
     public void kullanici_sepetin_bos_oldugunu_kontrol_etmeli() {
 
-        System.out.println(hediyeCeki.sepetteUrunYok.getText());
-        Assert.assertTrue(hediyeCeki.sepetteUrunYok.getText().contains("ürün yok"));
+        System.out.println(sepet.sepetteUrunYok.getText());
+        Assert.assertTrue(sepet.sepetteUrunYok.getText().contains("ürün yok"));
 
     }
 }
