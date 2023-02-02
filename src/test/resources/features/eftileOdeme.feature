@@ -1,7 +1,7 @@
-Feature: Kullanici eft ile odeme yapabilmeli
+Feature: Kullanici login olup eft ile odeme yapabilmeli
 
   @EFT @smoke
-  Scenario: Kullanici eft ile odeme yapabilmeli
+  Scenario: Kullanici login olup eft ile odeme yapabilmeli
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali
     And Kullanici urun secmeli "Beyaz Eşya" "Bulaşık Makinesi" "BM 4044 IBulaşık Makinesi"

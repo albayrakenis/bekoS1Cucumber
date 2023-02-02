@@ -33,6 +33,7 @@ public class Test02_SatinAl {
         BrowserUtils.waitFor(2);
 
         satinAl.sepeteAt.click();
+        satinAl.sepeteGit.click();
 
 
 
@@ -41,8 +42,8 @@ public class Test02_SatinAl {
     @When("Kullanici odeme adimina gitmeli")
     public void kullanici_odeme_adimina_gitmeli() {
 
-        satinAl.sepeteGit.click();
         BrowserUtils.clickWithJS(satinAl.sepetiOnayla);
+        BrowserUtils.waitFor(2);
 
 
     }
@@ -50,7 +51,6 @@ public class Test02_SatinAl {
     @Then("Kullanici kart bilgilerini girmeli")
     public void kullanici_kart_bilgilerini_girmeli() {
 
-        BrowserUtils.waitFor(2);
         BrowserUtils.clickWithJS(satinAl.krediKarti);
         satinAl.krediKartiNumarasi.sendKeys(ConfigurationReader.get("krediKartiNumarasi"));
         satinAl.krediKartiSahibi.sendKeys(faker.name().fullName());
