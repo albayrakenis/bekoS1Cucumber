@@ -34,8 +34,8 @@ public class Test05_SepettenUrunSilme {
         Assert.assertEquals("Sepetinde henüz ürün yok.",urunSayfasi.sepetindeUrunYok.getText());
     }
 
-    @And("Kullanici sepeti bosalt tusuna basabilmeli")
-    public void kullaniciSepetiBosaltTusunaBasabilmeli() {
+    @And("Kullanici sepeti bosalt tusuna basmali")
+    public void kullaniciSepetiBosaltTusunaBasmali() {
         BrowserUtils.clickWithJS(anasayfa.anasayfaSepetIcon);
         BrowserUtils.clickWithJS(urunSayfasi.sepetiBosaltTusu);
 

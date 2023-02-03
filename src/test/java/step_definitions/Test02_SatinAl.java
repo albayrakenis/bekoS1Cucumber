@@ -32,8 +32,10 @@ public class Test02_SatinAl {
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         BrowserUtils.waitFor(2);
 
-        satinAl.sepeteAt.click();
-        satinAl.sepeteGit.click();
+
+        BrowserUtils.clickWithJS(satinAl.sepeteAt);
+        BrowserUtils.clickWithJS(satinAl.sepeteGit);
+
 
 
 
