@@ -35,4 +35,7 @@ public class Sepet extends BasePage{
     @FindBy(css = "#tcknArea")
     public WebElement tcKimlikNumarasi;
 
+    @FindBy(xpath = "//button[@id='g-recaptcha-btn-favourite']/span[1]")
+    public WebElement sepettenFavorilereEkleme;
+
 }

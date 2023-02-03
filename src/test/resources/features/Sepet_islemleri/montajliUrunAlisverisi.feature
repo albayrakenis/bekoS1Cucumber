@@ -1,13 +1,12 @@
 Feature: Montajli urun alisverisi
 
 
-  @montajliUrun @smoke
+  @montajliUrun @smoke @sepetislemleri
   Scenario: Sepet islemleri - montajli urun alisverisi
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali
     And Ana sayfada arama butonuna tikla
     And Arama bolumune aranacak urun adini yaz "CM 9120"
-    And Entere bas
     And Sonuclardan ilgili urune tiklanir
     And Kullanici sepete eklemeli
     And Kullanici odeme adimina gitmeli

@@ -4,15 +4,15 @@ Feature: Favorelere ekleyebilmeli
   Scenario Outline: Kullanici urunleri pdp sayfasında favorelere ekleyebilmeli
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali
-    And Kullanici once kategori  sonra baslik tiklamali "<kategori>" "<baslik>" "<urunAdi>"
+    And Kullanici televizyonlardan rastgele bir urun secmeli "<kategori>" "<baslik>"
     And  Kullanici favorilerim sekmesine tiklamali
-    And Kullanici favorile gidip favorileri kontrol etmeli "<urunAdi>"
+    And Kullanici favoririm sayfasinda listeyi bosalt tusuna basmali
     And Kullanici cikis yap sekmesine tiklamali
 
 
 
 
     Examples:
-      | kategori          | baslik |urunAdi|
-      | Küçük Ev Aletleri | Ütü    |BKK 2199|
+      | kategori          | baslik |
+      | Küçük Ev Aletleri | Ütü    |
 

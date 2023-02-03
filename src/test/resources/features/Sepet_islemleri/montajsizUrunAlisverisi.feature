@@ -1,13 +1,12 @@
 Feature: Montajsiz urun alisverisi
 
 
-  @montajsizUrun @smoke
+  @montajsizUrun @smoke @sepetislemleri
   Scenario: Sepet islemleri - montajli urun alisverisi
     Given Kullanici giris sayfasina gitmeli
     When Kullanici login olmali
     And Ana sayfada arama butonuna tikla
     And Arama bolumune aranacak urun adini yaz "BKK 2220 IC"
-    And Entere bas
     And Sonuclardan ilgili urune tiklanir
     And Kullanici sepete eklemeli
     And Kullanici odeme adimina gitmeli

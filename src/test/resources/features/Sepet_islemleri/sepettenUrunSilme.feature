@@ -13,5 +13,5 @@ Feature: Sepetten urun silme
   @urunSil @smoke
   Scenario: Sepete urun ekleyip sepeti boşalt kullanarak sepetten urunleri silme
     And Kullanici urunleri sepete ekleyebilmeli
-    And Kullanici sepeti bosalt tusuna basabilmeli
+    And Kullanici sepeti bosalt tusuna basmali
     Then Sepette urun olmadigini kontrol edilmeli

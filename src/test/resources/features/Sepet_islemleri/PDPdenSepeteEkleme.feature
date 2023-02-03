@@ -1,14 +1,13 @@
 Feature: PDP den sepete urun ekleme
 
 
-  @PDPsepete @smoke
+  @PDPsepete @smoke @sepetislemleri
   Scenario Outline: PDP den sepete urun ekleme
     Given Kullanici giris sayfasina gitmeli
-    #When Kullanici login olmali
     And Kullanici urun secmeli "<kategoriAdi>" "<baslikAdi>" "<urunAdi>"
     And Kullanici sepete eklemeli
     Then Kullanici ekledigi urunu sepette kontrol etmeli
-    Then Kullanici sepeti bosalt tusuna basabilmeli
+    Then Kullanici sepeti bosalt tusuna basmali
     Then Kullanici sepetin bos oldugunu kontrol etmeli
 
 

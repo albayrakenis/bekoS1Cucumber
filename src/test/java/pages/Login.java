@@ -38,11 +38,10 @@ public class Login {
     @FindBy(xpath = "(//a[@class='nav-link'])[9]")
     public WebElement cikisYap;
 
-    @FindAll({
-            @FindBy(id = "g-recaptcha-btn-login"),
-            //@FindBy(xpath = "//*[text()='Giriş Yap']")
-    })
+    @FindBy(xpath = "//button[@id='g-recaptcha-btn-login']")
     public WebElement girisYapButonu;
+
+
 
 
     public void bekoLogin() throws InterruptedException {
