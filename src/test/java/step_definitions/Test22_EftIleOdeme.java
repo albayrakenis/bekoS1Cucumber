@@ -101,13 +101,13 @@ public class Test22_EftIleOdeme extends Odeme {
     public void kullaniciUyeOlmadanDevamEtmeli() {
         Faker faker = new Faker();
         BrowserUtils.clickWithJS(login.uyeOlmadanDevamEt);
-        login.guest_email.sendKeys(faker.name().firstName()+faker.name().lastName()+"@gmail.com");
+        login.guest_email.sendKeys("albayrak"+faker.number().numberBetween(1,250)+"@gmail.com");
         BrowserUtils.clickWithJS(login.uyeOlmadanDevamEtButonu);
     }
 
     @And("Kullanici teslimat adresi secmeli")
     public void kullaniciTeslimatAdresiSecmeli() {
-
+        BrowserUtils.waitFor(1);
         BrowserUtils.clickWithJS(sepet.teslimatAdresiSec);
         BrowserUtils.clickWithJS(sepet.yeniAdresEkle);
 
