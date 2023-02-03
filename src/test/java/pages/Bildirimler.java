@@ -70,5 +70,8 @@ public class Bildirimler {
     @FindBy(xpath = "//div[@class='usr-addresses']/div//a[contains(.,'Sil')]")
     public List<WebElement> adresListesi;
 
+    @FindBy(css = ".remove-my-all-list")
+    public WebElement favorilerimListeyiBosalt;
+
 
 }
